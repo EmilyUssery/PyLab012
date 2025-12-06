@@ -13,7 +13,6 @@ def main():
     solar_system.show_planets()
     sim.run()
     solar_system.show_planets()
-    earth = Planet(name = "Earth", mass = .560, distance = 2, temp = 200, x = 5, y = 6, vel_x = 100, vel_y = 20, color = "blue")
-    solar_system.add_planet(earth)
+
 if __name__ == "__main__": main()
 

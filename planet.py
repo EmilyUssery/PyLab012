@@ -4,7 +4,7 @@ import turtle
 
 class Planet:
     def __init__(self, name: str, radium: float, mass: float, distance: float, temp:float,
-                 x: float,y: float, vel_x: float, vel_y: float, color: float):
+                 x: float,y: float, vel_x: float, vel_y: float):
         self.__name = name
         self.__radium = radium
         self.__mass = mass
@@ -14,7 +14,7 @@ class Planet:
         self.__y = y
         self.__vel_x = vel_x
         self.__vel_y = vel_y
-        self.__color = color
+
 
     def get_mass(self) -> float:
         return self.__mass
