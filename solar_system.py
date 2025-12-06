@@ -1,6 +1,6 @@
 from sun import Sun
 from planet import Planet
-from gravity import UniversalGravity as U
+from gravity import UniversalGravity as U, UniversalGravity
 import math
 from typing import List
 
@@ -20,7 +20,7 @@ class SolarSystem:
             print(planet)
 
     def move_planets(self, dt: float = 60 * 60):
-        dt = 9.8 # Constant time interval for each solar system iteration.
+        dt = .1 # Constant time interval for each solar system iteration.
 
         for planet in self._planets:
             # Move the distance covered in the interval dt

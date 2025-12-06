@@ -1,20 +1,28 @@
 import math
 import turtle
 
-
 class Planet:
-    def __init__(self, name: str, radium: float, mass: float, distance: float, temp:float,
-                 x: float,y: float, vel_x: float, vel_y: float, color: float):
+    def __init__(self, name: str, radium: float, mass: float, distance: float,
+                 x: float,y: float, vel_x: float, vel_y: float, color:str ):
         self.__name = name
         self.__radium = radium
         self.__mass = mass
         self.__distance = distance
-        self.__temp = temp
         self.__x = x
         self.__y = y
         self.__vel_x = vel_x
         self.__vel_y = vel_y
-        self.__color = color
+        # Turtle stuff
+        self._t = turtle.Turtle()
+        self._t.color(color)
+        self._t.shape('circle')
+        self._solar_system = None
+        self._t.penup()
+        self.ratio = .5
+        self._t.goto(self.__x, self.__y)
+        self._t.pendown()
+
+
 
     def get_mass(self) -> float:
         return self.__mass
@@ -40,6 +48,7 @@ class Planet:
     def move_to(self,new_x:float, new_y:float):
         self.__x = new_x
         self.__y = new_y
+        self._t.goto(new_x, new_y)
 
     def get_distance(self) -> float:
         """Distance from sun at (0,0)."""
